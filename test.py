@@ -18,3 +18,13 @@ if __name__ == "__main__":
     zero = Vector.zero(2)
     print(zero)
     print("{} + {} = {}".format(vec, zero, vec + zero))
+
+    print("norm({}) = {}".format(vec, vec.norm()))
+
+    print("normalize {} is {}".format(vec, vec.normalize()))
+    print(vec.normalize().norm())
+
+    try:
+        zero.normalize()
+    except ZeroDivisionError:
+        print("Cannot normalize zero vector {}.".format(zero))
